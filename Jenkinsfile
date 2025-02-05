@@ -13,7 +13,8 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
-                pip install -r requirements.txt
+                apt-get update && apt-get install -y pipx
+                pipx install -r requirements.txt
                 '''
             }
         }
