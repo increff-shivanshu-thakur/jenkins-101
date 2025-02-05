@@ -13,8 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
-                apt-get update && apt-get install -y pipx
-                pipx install -r requirements.txt
+                pipx install -r requirements.txt --break-system-packages
                 '''
             }
         }
